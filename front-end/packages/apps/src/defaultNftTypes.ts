@@ -31,6 +31,11 @@ const defaultNftTypes = `{
       "ReFungible": "(u32, u32)"
     }
   },
+  "FungibleItemType": {
+    "Collection": "u64",
+    "Owner": "AccountId",
+    "Data": "Vec<u8>"
+  },
   "NftItemType": {
     "Collection": "u64",
     "Owner": "AccountId",

@@ -62,10 +62,10 @@ function useCollection(api: PolkadotApiInterface | null) {
       return;
     }
     try {
-      const collectionsCount = (await api.query.nft.nextCollectionID()).toNumber();
+      const collectionsCount = (await api.query.nft.createdCollectionCount()).toNumber();
       const collections: Array<NftCollectionBigInterface> = [];
-      for (let i = 1; i < collectionsCount; i++) {
-        const collectionInf = await getDetailedCollectionInfo(i);
+      for (let i = 0; i < collectionsCount; i++) {
+        const collectionInf = await getDetailedCollectionInfo(i + 1);
         if (collectionInf && collectionInf.Owner && collectionInf.Owner.toString() !== '5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM') {
           collections.push({ ...collectionInf, id: i });
         }
