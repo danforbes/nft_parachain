@@ -1,0 +1,9 @@
+{
+  "name": "unique-scripts",
+  "version": "0.0.0",
+  "license": "Unlicense",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "@polkadot/api": "^1.32.1"
+  }
+}
